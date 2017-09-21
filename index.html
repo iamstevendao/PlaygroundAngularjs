@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello world from Angularjs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="invoice.js"></script>
+</head>
+
+<body>
+  <div ng-app="invoice" ng-controller="InvoiceController as invoice">
+    <div>
+      Quantity:
+      <input ng-model="invoice.qty">
+    </div>
+    <div>
+      Cost:
+      <input ng-model="invoice.cost">
+    </div>
+    <span>
+      Invoice: {{invoice.total() | currency}}
+    </span>
+  </div>
+</body>
+
+</html>
