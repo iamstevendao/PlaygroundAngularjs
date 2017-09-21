@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- <div ng-app="invoice" ng-controller="InvoiceController as invoice">
+  <div ng-app="invoice" ng-controller="InvoiceController as invoice">
     <div>
       Quantity:
       <input ng-model="invoice.qty">
@@ -21,11 +21,11 @@
     <span>
       Invoice: {{invoice.total() | currency}}
     </span>
-  </div> -->
+  </div>
 
-  <div ng-app='timeline' ng-controller="TimelineController as timeline">
+  <div ng-app="timeline" ng-controller="TimelineController">
     <ul>
-      <li ng-repeat="todo in timeline.todos">
+      <li ng-repeat="todo in todos">
         {{todo.text}} - <em>{{todo.done}}</em>
       </li>
     </ul>
