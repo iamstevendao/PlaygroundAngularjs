@@ -5,10 +5,11 @@
   <title>Hello world from Angularjs</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="invoice.js"></script>
+  <script src="timeline.js"></script>
 </head>
 
 <body>
-  <div ng-app="invoice" ng-controller="InvoiceController as invoice">
+  <!-- <div ng-app="invoice" ng-controller="InvoiceController as invoice">
     <div>
       Quantity:
       <input ng-model="invoice.qty">
@@ -20,6 +21,14 @@
     <span>
       Invoice: {{invoice.total() | currency}}
     </span>
+  </div> -->
+
+  <div ng-app='timeline' ng-controller="TimelineController as timeline">
+    <ul>
+      <li ng-repeat="todo in timeline.todos">
+        {{todo.text}} - <em>{{todo.done}}</em>
+      </li>
+    </ul>
   </div>
 </body>
 
