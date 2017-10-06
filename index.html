@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello world from Angularjs</title>
+  <link rel="stylesheet" href="index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="finance.js"></script>
   <script src="invoice.js"></script>
@@ -22,6 +23,16 @@
     <span ng-repeat="currency in invoice.currencies">
       Invoice: {{invoice.total(currency) | currency}} {{currency}}
     </span>
+
+    <div ng-controller="Grandfather">
+      <p>Good {{timeOfTheDay}}, {{name}}</p>
+      <div ng-controller="Father">
+        <p>Good {{timeOfTheDay}}, {{name}}</p>
+        <div ng-controller="Son">
+          <p>Good {{timeOfTheDay}}, {{name}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

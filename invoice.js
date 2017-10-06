@@ -11,4 +11,16 @@
           return currencyConverter.convert(this.qty * this.cost, this.inCurr, outCurr)
         }
       }])
+    .controller('Grandfather', function ($scope) {
+      $scope.timeOfTheDay = 'morning'
+      $scope.name = 'Grandfather'
+    })
+    .controller('Father', function ($scope) {
+      $scope.timeOfTheDay = 'afternoon'
+      $scope.name = 'father'
+    })
+    .controller('Son', function ($scope) {
+      $scope.timeOfTheDay = 'evening'
+      $scope.name = 'Son'
+    })
 })(window.angular)
