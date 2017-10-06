@@ -18,18 +18,11 @@
       Cost:
       <input ng-model="invoice.cost">
     </div>
-    <span>
-      Invoice: {{invoice.total() | currency}}
+    <span ng-repeat="currency in invoice.currencies">
+      Invoice: {{invoice.total(currency) | currency}} {{currency}}
     </span>
   </div>
 
-  <div ng-app="timeline" ng-controller="TimelineController">
-    <ul>
-      <li ng-repeat="todo in todos">
-        {{todo.text}} - <em>{{todo.done}}</em>
-      </li>
-    </ul>
-  </div>
 </body>
 
 </html>
